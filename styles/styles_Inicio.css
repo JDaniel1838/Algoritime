@@ -1,0 +1,1401 @@
+/*  Ubuntu: font-family: 'Ubuntu', sans-serif;
+    Opent Sant: font-family: 'Open Sans', sans-serif;
+*/
+:root{
+    --Ubuntu: 'Ubuntu', sans-serif;
+    --Sant: 'Open Sans', sans-serif;
+    --negro: #29323C;
+    --naranja1:#FC6076;
+    --border1:1px solid #000;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-family: var(--Ubuntu);
+    position: relative;
+
+
+}
+
+body::-webkit-scrollbar {
+    width: 16px;     /* Tamaño del scroll en vertical */
+    height: 16px;    /* Tamaño del scroll en horizontal */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #FF9A44 0%, #FC6076 100%);
+    border-radius: 4px;
+}
+
+
+
+/* INICIA HEADER */
+header{
+    width: 100%;
+    height: 4.5rem;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+header > nav{
+    width: 100%;
+    height: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: #fff;
+    position: fixed;
+}
+
+header > nav.sombra{
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
+}
+
+header > nav > .nav_logo{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+header > nav > .nav_logo> img{
+    width: 2.2rem;
+    height: auto;
+    margin-right: 2rem;
+}
+
+header > nav > .nav_logo> h1{
+    font-size: 1.5rem;
+    letter-spacing: .7rem;
+    column-rule: var(--negro);
+}
+
+header > nav > .nav_enlaces{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+header > nav > .nav_enlaces>a{
+    font-size: .9rem;
+    color: var(--negro);
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    transition: .3s;
+}
+
+header > nav > .nav_enlaces>a.activado{
+    color: var(--naranja1);
+}
+
+header > nav > .nav_enlaces>a:hover{
+    color: var(--naranja1);
+}
+
+header > nav > .nav_registrologin{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+header > nav > .nav_registrologin>button{
+    font-size: .9rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    transition: .3s;
+    background: linear-gradient(180deg, #FF9A44 0%, #FC6076 100%);
+    padding: .8rem 1.6rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+}
+
+header > nav > .nav_registrologin>button:hover{
+    transform: scale(1.1);
+}
+
+
+.btnHamburger{
+    width: 0;
+    height: 0;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+.Menu{
+    width: 0;
+    height: 0;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+/* ----------------------------------------- */
+
+
+
+/* INICIA SESSION INICIO */
+.inicio{
+    width: 100%;
+    height: 35rem;
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #fff;
+}
+
+.inicio > .titles{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: -2rem 0 0 0;
+}
+
+.inicio > .titles> h2{
+    font-size: 3.75rem;
+    font-weight: bold;
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    position: relative;
+}
+
+.inicio > .titles> h2:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #FC6076 0%, #FF9A44 96.25%);
+    mix-blend-mode: screen; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.inicio > .titles> h3{
+    font-size: 3.5rem;
+    font-weight: bold;
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.inicio > .titles> h3:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #29323C 0%, #485563 100%);
+    mix-blend-mode: screen; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.inicio > .titles >button{
+    font-size: .9rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    transition: .3s;
+    background: linear-gradient(180deg, #FF9A44 0%, #FC6076 100%);
+    padding: .8rem 1.6rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+}
+
+.inicio > .titles >button:hover{
+    transform: scale(1.1);
+}
+
+.inicio > .img_phone{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.inicio > .img_phone>img{
+    width: 20rem;
+    height: auto;
+    overflow: hidden;
+}
+
+.inicio > .Img_fondo1{
+    position: absolute;
+    top: 4rem;
+    right: -2rem;
+    width: 24rem;
+    z-index: 1;
+    transform: rotate(338deg);
+}
+
+
+.inicio > .Img_fondo2{
+    position: absolute;
+    bottom: 2rem;
+    left: -3rem;
+    width: 12rem;
+    z-index: 1;
+    transform: rotate(338deg);
+}
+
+/* Margin Scroll */
+
+
+/* -------------------- */
+
+/* INICIA SESSION ACERCA DE */
+.acerca_de{
+    width: 100%;
+    height: 35rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+.acerca_de > .titleLogo{
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.acerca_de > .titleLogo > img{
+    width: 5rem;
+    height: auto;
+    margin-right: 2rem;
+}
+
+.acerca_de > .titleLogo> h2{
+    font-size: 3.75rem;
+    letter-spacing: 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    position: relative;
+}
+
+.acerca_de > .titleLogo> h2:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #29323C 0%, #3C4A83 100%);
+    mix-blend-mode: screen; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ContentCards{
+    width: 100%;
+    height: 27rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+.ContentCards > .content{
+    width: 20%;
+    height: 19rem;
+    border-radius: 9px;
+    box-shadow: inset -2px -2px 5px 0 rgba(0, 0, 0, 0.25),inset 2px 2px 5px 0 rgba(0, 0, 0, 0.25) ;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.ContentCards > .content> img{
+    width: 4rem;
+    height: auto;
+    margin: -1rem 0 .5rem 0;
+}
+
+.ContentCards > .content > h4{
+    color: var(--naranja1);
+    margin: .5rem 0;
+}
+
+.ContentCards > .content > p{
+    color: var(--negro);
+    margin: .5rem 0;
+    width: 90%;
+    text-align: justify;
+    font-family: var(--Sant);
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+
+.Img_fondo3{
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+    width: 39rem;
+    z-index: 1;
+}
+
+.Img_fondo4{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/* ------------------------------------------ */
+
+/* INICIA SESSION 3 - HERRAMIENTAS */
+
+.herramientas{
+    width: 100%;
+    height: 35rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+
+.herramientas >h2{
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    position: relative;
+    margin: 1rem auto;
+}
+
+.herramientas> h2:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #FC6076 0%, #FF9A44 96.25%);
+    mix-blend-mode: screen; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.herramientas > .Contcarrusel{
+    width: 70%;
+    height: 26rem;
+    margin: 1.5rem auto;
+    border-radius: 20px;
+}
+
+.herramientas > .Contcarrusel > .carrusel1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    box-shadow:  7px 7px 14px #c7c7c7, -7px -7px 14px #ffffff;
+}
+
+.herramientas > .Contcarrusel > .carrusel1 > .containerImg{
+    width: 35%;
+    height: 100%;
+    position: relative;
+}
+
+.herramientas > .Contcarrusel >.carrusel1> .CarruselText{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.herramientas > .Contcarrusel >.carrusel1> .CarruselText>h5{
+    color: #29323C;
+    font-size: 3rem;
+}
+
+.herramientas > .Contcarrusel >.carrusel1> .CarruselText >h3{
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    position: relative;
+}
+
+
+
+.herramientas > .Contcarrusel >.carrusel1> .CarruselText> h3:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #FC6076 0%, #FF9A44 96.25%);
+    mix-blend-mode: screen; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.herramientas > .Contcarrusel >.carrusel1> .CarruselText >h4{
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    position: relative;
+}
+
+
+
+.herramientas > .Contcarrusel >.carrusel1> .CarruselText> h4:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #29323C 0%, #3C4A83 100%);
+    text-shadow: 1px 2px #29323C;
+    mix-blend-mode: screen; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.herramientas > .Contcarrusel >.carrusel1> .CarruselText >h5{
+    color: #fd7d5d;
+    text-shadow: .5px 1px rgba(0, 0, 0, 0.644);
+}
+
+
+.herramientas > .Contcarrusel > .carrusel1>.containerImg> img{
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 2rem;
+}
+
+
+
+/* -------------------------------------- */
+
+/* INICIAN ESTILOS Login */
+.Login{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -10;
+
+}
+
+.Login.activo{
+    visibility: visible;
+    opacity: 1;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(36, 36, 36, 0.120);
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Login > .form{
+    width: 35%;
+    height: 32rem;
+    background-color: #FFF;
+    border-radius: 0 35px 0 35px;
+    box-shadow: 0 3px 4px 0 rgba(36, 36, 36, 0.233);
+    overflow: hidden;
+}
+
+.Login > .form > form{
+    width: 100%;
+    height: 100%;
+}
+
+.Login > .form > form>.createCuenta{
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.Login > .form > form>.createCuenta.activo{
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.Login > .form > form > .createCuenta > .exitform{
+    position: absolute;
+    width: 2.5rem;
+    height: auto;
+    top: 1rem;
+    right: 1rem;
+    z-index: 55;
+    padding: 0.5rem;
+    cursor: pointer;
+    background: linear-gradient(180deg, #29323C 0%, #3C4A83 100%);
+    border-radius: 50%;
+}
+
+
+.createCuenta > div{
+    width: 75%;
+    height: 3.8rem;
+    margin: .25rem auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .7rem;
+}
+
+.createCuenta > .titlesForm{
+    width: 75%;
+    height: 3.8rem;
+    margin: .25rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .7rem;
+}
+
+.createCuenta >.titlesForm> img{
+    width: 3.5rem;
+    height: auto;
+    margin: .7rem 1rem .7rem .7rem;
+}
+
+.createCuenta >.titlesForm> h2{
+    font-size: 2rem;
+    font-weight: bold;
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    position: relative;
+}
+
+.createCuenta >.titlesForm> h2:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #29323C 0%, #3C4A83 100%);
+    mix-blend-mode: screen; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.createCuenta > div>label{
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--negro);
+    margin-bottom: .1rem;
+}
+
+.createCuenta > div> input{
+    background-color: #f3f3f4;
+    border: 4px transparent solid;
+    font-size: 1.1rem;
+    padding: .3rem;
+    border-radius: 10px;
+    margin: .1rem;
+    transition: .2s;
+    font-family: var(--Sant);
+    font-weight: 500;
+}
+
+
+.createCuenta > div> input:focus{
+    background-color: #fff;
+    outline: none;
+    border: 4px rgba(253, 125, 93, 0.596) solid;
+}
+
+.createCuenta > div> input:hover{
+    background-color: #fff;
+    border: 4px rgba(253, 125, 93, 0.582) solid;
+}
+
+.createCuenta >.inputPassword{
+    position: relative;
+}
+
+.createCuenta >.inputPassword>svg{
+    position: absolute;
+    bottom: 0;
+    width: 2rem;
+    height: auto;
+    right: 1rem;
+}
+
+
+.createCuenta> button{
+    font-size: .9rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    transition: .3s;
+    background: linear-gradient(180deg, #FF9A44 0%, #FC6076 100%);
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 1rem auto;
+}
+
+.createCuenta> button:hover{
+    transform: scale(1.1);
+}
+
+
+.createCuenta > h3{
+    color: var(--negro);
+    font-weight: 300;
+}
+
+.createCuenta > h3>span{
+    color: #fd7d5d;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.Login > .form > form>.Registrarse{
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.Login > .form > form>.Registrarse.activo{
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -2rem;
+    position: relative;
+}
+
+
+.Login > .form > form>.Registrarse > .exitform{
+    position: absolute;
+    width: 2.5rem;
+    height: auto;
+    top: 2.5rem;
+    right: .5rem;
+    z-index: 55;
+    padding: 0.5rem;
+    cursor: pointer;
+    background: linear-gradient(180deg, #29323C 0%, #3C4A83 100%);
+    border-radius: 50%;
+}
+
+
+
+.Registrarse > h2{
+    font-size: 2rem;
+    margin: .7rem auto;
+    font-weight: bold;
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    position: relative;
+}
+
+.Registrarse > h2:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #29323C 0%, #3C4A83 100%);
+    mix-blend-mode: screen; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.Registrarse > img{
+    width: 3.9rem;
+    height: auto;
+    margin: .7rem;
+}
+
+.Registrarse > div{
+    width: 75%;
+    height: 4.2rem;
+    margin: .25rem auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .7rem;
+}
+
+.Registrarse > div>label{
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--negro);
+    margin-bottom: .3rem;
+}
+
+.Registrarse > div> input{
+    background-color: #f3f3f4;
+    border: 4px transparent solid;
+    font-size: 1.2rem;
+    padding: .3rem;
+    border-radius: 10px;
+    margin: .2rem;
+    transition: .2s;
+    font-family: var(--Sant);
+    font-weight: 500;
+}
+
+
+.Registrarse > div> input:focus{
+    background-color: #fff;
+    outline: none;
+    border: 4px rgba(253, 125, 93, 0.596) solid;
+}
+
+.Registrarse > div> input:hover{
+    background-color: #fff;
+    border: 4px rgba(253, 125, 93, 0.582) solid;
+}
+
+.Registrarse >.inputPassword{
+    position: relative;
+}
+
+.Registrarse >.inputPassword>svg{
+    position: absolute;
+    bottom: .2rem;
+    width: 2.1rem;
+    height: auto;
+    right: 1rem;
+}
+
+
+.Registrarse> button{
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    transition: .3s;
+    background: linear-gradient(180deg, #FF9A44 0%, #FC6076 100%);
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 1rem auto;
+}
+
+.Registrarse> button:hover{
+    transform: scale(1.1);
+}
+
+
+.Registrarse > h3{
+    color: var(--negro);
+    font-weight: 300;
+}
+
+.Registrarse > h3>span{
+    color: #fd7d5d;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* ------------------------------------- */
+
+/* Inician ESTILOS FOOTER */
+footer{
+    width: 100%;
+    height: 15rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    /* background-image: linear-gradient(to top, #dfe9f3 0%, white 100%); */
+    background: linear-gradient(180deg, #FF9A44 0%, #FC6076 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+footer >.socialMedia{
+    width: 30%;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+footer >.socialMedia>a{
+    cursor: pointer;
+}
+
+footer >.socialMedia>a> img{
+    width: 2rem;
+    height: auto;
+    margin: .5rem;
+}
+
+footer > h5,h6{
+    margin: .5rem auto;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--negro);
+}
+
+footer > h6{
+    font-weight: 400;
+}
+footer > h4{
+    margin-top: 1rem;
+}
+
+footer > h4 > span{
+    font-weight: 600;
+    color: #fff;
+}
+
+footer > .Img_fondo5{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+footer > .Img_fondo6{
+    position: absolute;
+    width: 10rem;
+    right: -2rem;
+    bottom: -2rem;
+}
+
+footer > .Img_fondo7{
+    position: absolute;
+    width: 3rem;
+    right: 10rem;
+    bottom: 2rem;
+}
+
+footer > .Img_fondo8{
+    position: absolute;
+    width: 9rem;
+    left: 10rem;
+    bottom: 1rem;
+}
+
+footer > .Img_fondo9{
+    position: absolute;
+    width: 3rem;
+    left: 23rem;
+    bottom: 1rem;
+}
+
+
+
+
+/*---------- RESPONSIVE WEB DESING -------------*/
+@media screen and (max-width: 1100px) {
+    html{
+        font-size: 15px;
+    }
+
+    .inicio{
+        height: 39rem;
+    }
+
+    .inicio > .titles> h2{
+        font-size: 3.3rem;
+    }
+
+    .inicio > .titles> h3{
+        font-size: 2.9rem;
+    }
+
+    .inicio > .img_phone>img {
+        width: 18rem;
+    }
+
+    .acerca_de {
+        width: 100%;
+        height: 39rem;
+    }    
+
+    .ContentCards > .content {
+        height: 22rem;
+    }    
+
+    .herramientas{
+        height: 39rem;
+    }
+
+    .herramientas > .Contcarrusel > .carrusel1>.containerImg> img {
+        width: 67%;
+    }
+
+    .herramientas > .Contcarrusel {
+        width: 75%;
+        height: 28rem;
+    }
+
+    .Img_fondo3 {
+        
+        width: 45rem;
+    }
+
+
+    
+
+
+} 
+
+@media screen and (max-width: 950px) {
+    header > nav{
+        justify-content: space-between;
+    }
+
+    header > nav > .nav_enlaces{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    header > nav > .nav_registrologin{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .btnHamburger{
+        width: 3.5rem;
+        height: 3.5rem;
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+        padding: .75rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.644);
+        margin: auto 2rem auto 2rem;
+        cursor: pointer;
+    }
+
+    .btnHamburger> img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .MenuV{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+
+    }
+
+    .MenuV.activado{
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+        z-index: 20;
+        position: fixed;
+        top:0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        height: auto;
+        background-color: #fff;
+        border-radius: 0 0 0 20px;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.644);
+    }
+
+    .MenuV> .containerMenuV{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+
+    .MenuV>.containerMenuV>.nav_enlacesV{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center
+    }
+    
+    .MenuV>.containerMenuV>.nav_enlacesV>a{
+        font-size: .9rem;
+        color: var(--negro);
+        font-weight: bold;
+        letter-spacing: .2rem;
+        text-decoration: none;
+        transition: .3s;
+        margin: 2rem auto 0 auto;
+    }
+    
+    .MenuV>.containerMenuV>.nav_enlacesV>a.activado{
+        color: var(--naranja1);
+    }
+    
+    .MenuV>.containerMenuV>.nav_enlacesV>a:hover{
+        color: var(--naranja1);
+    }
+
+    .MenuV>.containerMenuV>.nav_enlacesV>button{
+        font-size: .9rem;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: .2rem;
+        text-decoration: none;
+        transition: .3s;
+        background: linear-gradient(180deg, #FF9A44 0%, #FC6076 100%);
+        padding: .8rem 1.6rem;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        margin: 2rem auto;
+    }
+    
+    .MenuV>.containerMenuV>.nav_enlacesV>button:hover{
+        transform: scale(1.1);
+    }
+    
+
+    .MenuV>.containerMenuV>.contentMenuHamb{
+        height: 4.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+    }
+
+    .inicio > .Img_fondo1 {
+        width: 19rem;
+    }
+
+    header > nav > .nav_logo {
+        margin-left: 3rem;
+    }
+    
+    .inicio > .titles> h2 {
+        font-size: 3.9rem;
+        text-align: center;
+    }
+
+    .ContentCards > .content {
+        width: 28%;
+    }
+
+    .herramientas > .Contcarrusel > .carrusel1>.containerImg> img {
+        width: 91%;
+    }
+
+    .herramientas > .Contcarrusel >.carrusel1> .CarruselText {
+        width: 80%;
+    }
+
+    .herramientas > .Contcarrusel >.carrusel1> .CarruselText>h5 {
+        font-size: 2.4rem;
+    }
+
+    .Login > .form {
+        width: 45%;
+    }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .inicio {
+        height: 46rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .inicio > .titles {
+        width: 100%;
+        margin: 2rem 0 0 0;
+    }    
+
+    .inicio > .img_phone>img {
+        width: 14rem;
+    }
+
+    .inicio > .Img_fondo1 {
+        top: 19rem;
+        width: 15rem;
+    }
+
+    .inicio > .Img_fondo2 {
+        left: 2rem;
+        width: 8rem;
+    }
+
+    .acerca_de > .titleLogo> h2 {
+        font-size: 3rem;
+    }
+
+    .acerca_de > .titleLogo > img {
+        width: 3.5rem;
+    }
+
+    .MenuV.activado{
+        width: 35%;
+    }
+
+    .Login > .form {
+        width: 60%;
+    }
+    
+    .acerca_de {
+        width: 100%;
+        height: 73rem;
+    }
+
+    .ContentCards > .content {
+        width: 65%;
+    }
+
+    .ContentCards {
+        width: 100%;
+        height: 61rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .ContentCards > .content {
+        height: 18rem;
+        margin: 1rem;
+    }
+
+    .ContentCards > .content > p {
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .herramientas {
+        height: 50rem;
+    }   
+
+    .herramientas > .Contcarrusel > .carrusel1 {
+        flex-direction: column;
+    }    
+    .herramientas > .Contcarrusel >.carrusel1> .CarruselText {
+        width: 100%;
+    }
+
+    .herramientas > .Contcarrusel {
+        height: 39rem;
+    }
+
+    .herramientas > .Contcarrusel > .carrusel1 > .containerImg {
+        margin: 0 auto;
+    }
+
+    .herramientas > .Contcarrusel > .carrusel1>.containerImg> img {
+        width: 72%;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+    header > nav > .nav_logo {
+        width: 50%;
+    }
+
+    .MenuV.activado {
+        width: 43%;
+    }
+
+    .inicio > .Img_fondo1 {
+        top: 24rem;
+        width: 14rem;
+    }
+
+    .Login > .form {
+        width: 70%;
+    }
+
+    .acerca_de > .titleLogo > img {
+        width: 2.5rem;
+    }
+
+    .acerca_de > .titleLogo> h2 {
+        font-size: 2rem;
+    }
+
+    .herramientas > .Contcarrusel > .carrusel1 > .containerImg {
+        width: 46%;
+    }
+    
+    
+}
+
+@media screen and (max-width: 500px) {
+    
+    header > nav > .nav_logo> h1 {
+        font-size: 1.2rem;
+        letter-spacing: .5rem;
+    }    
+    .MenuV.activado {
+        width: 55%;
+    }
+    
+    .herramientas > .Contcarrusel {
+        width: 85%;
+    }
+
+    .Login > .form {
+        width: 75%;
+    }
+
+    .acerca_de > .titleLogo > img {
+        width: 2.5rem;
+    }
+
+    .acerca_de > .titleLogo> h2 {
+        font-size: 2.5rem;
+        letter-spacing: 0.5rem;
+    }
+
+    .herramientas > .Contcarrusel >.carrusel1> .CarruselText>h5 {
+        font-size: 2.2rem;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    html{
+        font-size: 14.5px;
+    }
+    .inicio > .img_phone {
+        width: 52%;
+    }
+
+    .inicio > .titles {
+        margin: 0;
+    }
+
+    .herramientas > .Contcarrusel > .carrusel1>.containerImg> img {
+        width: 84%;
+    }
+
+    .herramientas > .Contcarrusel >.carrusel1> .CarruselText>h5 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html{
+        font-size: 13px;
+    }
+}
